@@ -1,6 +1,6 @@
 ## MyDSA
 
-This repository is used to keep track of the various leetcode problems that I have solved. The solutions are both in Java, and Python.
+This repository is used to keep track of the various leetcode problems that I have solved. The solutions are coded in Java.
 
 ## Purpose
 
