@@ -1,32 +1,27 @@
 package TwoPointers;
 
 public class RainWater {
-    public int trap(int[] height){
-        if(height.length < 3){
-            return 0;
-        }
+    public int trap(int[] height) {
+        int lf = 0;
+        int rt = height.length - 1;
+        int bound = 0;
         int total = 0;
-        int l = 0, r = height.length - 1;
-        int maxL = height[l], maxR = height[r];
 
-        while(l < r){
-            if(maxL < maxR || maxL == maxR){
-                if(maxL - height[l] > 0){
-                    total += maxL - height[l];
-                } 
-                l++;
-
-                if(maxL < height[l]){
-                    maxL = height[l];
+        while(lf < rt){
+            if(height[lf] < height[rt]){
+                if(bound > height[lf]){
+                    total += bound - height[lf];
+                } else{
+                    bound = height[lf];
                 }
+                lf++;
             } else{
-                if(maxR - height[r] >= 0){
-                    total += maxR - height[r];
+                if(bound > height[rt]){
+                    total += bound - height[rt];
+                } else{
+                    bound = height[rt];
                 }
-                r--;
-                if(maxR < height[r]){
-                    maxR = height[r];
-                }
+                rt--;
             }
         }
 
