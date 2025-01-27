@@ -33,5 +33,4 @@ class MinimumStack {
     int getMin(){
         return minStack.peek();
     }
-
 }
