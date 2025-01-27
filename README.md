@@ -8,4 +8,4 @@ This repository is made to showcase my data structures and algorithms capabiliti
 
 ## Navigation
 
-All of my solution files are found within the `src` folder.
+All of my solution files are found within their specified type folder (ex. `TwoPointers`) within the `src` folder.
