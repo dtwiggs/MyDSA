@@ -1,7 +1,6 @@
 import java.util.*;
 
-class test {
+@SuppressWarnings("unused")
+class Test {
     
 }
-
-@SuppressWarnings("unused")
