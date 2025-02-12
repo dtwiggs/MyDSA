@@ -1,7 +1,8 @@
-import java.util.*;
+package Stack;
 
-@SuppressWarnings("unused")
-class Solution {
+import java.util.Stack;
+
+public class NextHotDay {
     public int[] dailyTemperatures(int[] temperatures) {
         if(temperatures.length == 1){
             return new int[] {0};
@@ -19,13 +20,6 @@ class Solution {
             stack.add(new int[] {temperatures[i], i});
         }
 
-
-
         return res;
     }
 }
-/*
-temperatures[] is an array of the temperature on the ith day
-return res[], where res[i], is the number of days until a warmer day will come
-
-*/
