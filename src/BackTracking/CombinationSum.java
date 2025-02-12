@@ -1,7 +1,10 @@
-import java.util.*;
+package BackTracking;
 
-@SuppressWarnings("unused")
-class Solution {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class CombinationSum {
     public List<List<Integer>> combinationSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
