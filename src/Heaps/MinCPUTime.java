@@ -1,13 +1,11 @@
-/*
-git reset --hard
-git clean -fd
-git pull
-*/
+package Heaps;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
-@SuppressWarnings("unused")
-class Solution {
+public class MinCPUTime {
     public int leastInterval(char[] tasks, int n) {
         if(tasks.length == 1){
             return 1;
@@ -33,18 +31,16 @@ class Solution {
             res++;
             
             if(heap.isEmpty()){
-                if(res >= queue.peek()[1]){
-                    heap.add(queue.poll()[0]);
-                    int[] tmp = new int[] {heap.poll(), res + n};
-                    if(tmp[0] > 0){
-                        queue.add(tmp);
-                    } 
-                }
+                res = queue.peek()[1];
             } else{
-                int[] tmp = new int[] {heap.poll(), res + n};
+                int[] tmp = new int[] {heap.poll() - 1, res + n};
                 if(tmp[0] > 0){
                     queue.add(tmp);
                 }
+            }
+
+            if (!queue.isEmpty() && queue.peek()[1] == res) {
+                heap.add(queue.poll()[0]);
             }
         }
         return res;
