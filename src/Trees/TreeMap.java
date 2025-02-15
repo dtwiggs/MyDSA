@@ -176,16 +176,16 @@ class TreeMap {
             getInorderRec(node.right, res);
         }
     }
-}
 
-class TreeNode {
-    int key;
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    public TreeNode(int key, int val) {
-        this.key = key;
-        this.val = val;
+    private class TreeNode {
+        int key;
+        int val;
+        TreeNode left;
+        TreeNode right;
+    
+        public TreeNode(int key, int val) {
+            this.key = key;
+            this.val = val;
+        }
     }
 }
