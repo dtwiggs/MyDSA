@@ -1,12 +1,9 @@
-/*
-git reset --hard
-git clean -fd
-git pull
-*/
-import java.util.*;
-@SuppressWarnings("unused")
+package Graphs;
 
-class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+public class SpiralTraverse {
     public List<Integer> spiralOrder(int[][] matrix) {
         int rows = matrix.length, cols = matrix[0].length;
         List<Integer> res = new ArrayList<>(rows * cols);
@@ -20,6 +17,7 @@ class Solution {
                     c++;
                 } else {
                     minR++;
+                    r++;
                     side++;
                 }
             } else if(side % 4 == 2){
@@ -27,6 +25,7 @@ class Solution {
                     r++;
                 } else {
                     maxC--;
+                    c--;
                     side++;;
                 }
             } else if(side % 4 == 3){
@@ -34,6 +33,7 @@ class Solution {
                     c--;
                 } else {
                     maxR--;
+                    r--;
                     side++;;
                 }
             } else if(side % 4 == 0){
@@ -41,6 +41,7 @@ class Solution {
                     r--;
                 } else {
                     minC++;
+                    c++;
                     side++;;
                 }
             } 
