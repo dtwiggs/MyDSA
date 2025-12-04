@@ -1,14 +1,8 @@
-/*
-git reset --hard
-git clean -fd
-git pull
-*/
-import java.util.*;
-@SuppressWarnings("unused")
+package ArraysAndHashing;
 
-class Solution {
+public class Turbulence {
     public int maxTurbulenceSize(int[] arr) {
-        int j = 0, max = 1, currMax = 1, curr = arr[j], last = 0;
+        int j = 0, max = 1, currMax = 1, last = 0;
 
         for(int i = 1; i < arr.length; i++){
             if(arr[i] < arr[j]){
