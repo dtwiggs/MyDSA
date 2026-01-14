@@ -9,5 +9,5 @@ import LinkedList.ListNode;
 @SuppressWarnings("unused")
 
 class Solution {
-    
+    HashSet<Integer, Integer> set = new HashSet<>();
 }
