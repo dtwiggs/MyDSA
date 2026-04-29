@@ -1,14 +1,6 @@
-/*
-git reset --hard
-git clean -fd
-git pull
-*/
-import java.util.*;
+package ArraysAndHashing;
 
-import LinkedList.ListNode;
-@SuppressWarnings("unused")
-
-class Solution {
+public class MaxConsecutiveOnes {
     public int findMaxConsecutiveOnes(int[] nums){
         int res = 0, curr = 0;
         for(int num : nums){
