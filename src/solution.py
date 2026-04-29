@@ -7,7 +7,16 @@
 from typing import List
 
 class Solution:
-    pass
+    def replace_elements(self, arr: List[int]) -> List[int]:
+        res = arr
+        max_num = arr[len(arr) - 1]
+        j = 0
+        for i in range(len(arr) - 1, -1, -1):
+            res[j] = max(arr[i], max_num)
+            j += 1
+
+        res[0] = -1
+        return reversed(res)
         
 
 if __name__ == "__main__":
