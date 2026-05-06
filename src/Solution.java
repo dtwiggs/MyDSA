@@ -9,5 +9,5 @@ import Java.LinkedList.ListNode;
 @SuppressWarnings("unused")
 
 class Solution {
-    
+
 }
