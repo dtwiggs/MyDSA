@@ -10,4 +10,5 @@ class ListNode:
         self.prev = prev
 
 class Solution:
+    
     pass
