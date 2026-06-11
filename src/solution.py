@@ -10,5 +10,6 @@ class ListNode:
         self.prev = prev
 
 class Solution:
-    
-    pass
+    def merge(self, nums1: List[int], nums2: List[int], n: int) -> None:
+        
+        pass
