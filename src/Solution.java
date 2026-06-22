@@ -12,6 +12,7 @@ class Solution {
     // Given a list of pairs, sort it using merge sort
     public List<Pair> mergeSort(List<Pair> pairs) {
         mergeSortRec(pairs, 0, pairs.size() - 1);
+        return pairs;
     }
 
     /*
@@ -22,9 +23,9 @@ class Solution {
     Merge them by putting them in order
     When you are merging the bigger lists, keep two pointers and iterate through them to sort them
      */
-    private List<Pair> mergeSortRec(List<Pair> pairs, int s, int e){
+    private void mergeSortRec(List<Pair> pairs, int s, int e){
         if(s >= e){
-            return pairs;
+            return;
         }
 
         int mid = ((e - s) / 2) + s;
@@ -32,11 +33,19 @@ class Solution {
         mergeSortRec(pairs, mid + 1, e);
         merge(pairs, s, mid, mid + 1, e);
 
-        return pairs;
+        return;
     }
 
-    private void merge(List<Pair> pairs, int s1, int e1. int s2, e2){
-
+    private void merge(List<Pair> pairs, int s1, int e1, int s2, int e2){
+        List<Pair> a = pairs.subList(s1, e1);
+        List<Pair> b = pairs.subList(s2, e2);
+        int i = 0, j = 0;
+        while(int i < a.size() && j < b.size()){
+            if(a.get(i) <= b.get(j)){
+                int tmp = pairs.get(i + j)
+                
+            }
+        }
     }
 }
 
